@@ -1,0 +1,72 @@
+body {
+	padding-top: 20px;
+	padding-bottom: 40px;
+	background-image: url(../img/Sunshine.png);
+	background-repeat: no-repeat;
+	background-color: #ffffcc;
+	background-size: cover;
+	background-attachment:fixed;
+	background-position:right bottom;
+	color:#371801; 
+}
+body:after{
+	opacity: .5;
+}
+
+.icon-heart {
+	color:red;
+}
+
+.alizapai {
+	a {
+		color:;
+	}
+	.nav {
+		margin-bottom:0px;
+		margin-top:13px;
+		display:inline-block;
+		float:right;
+	}
+	hr {
+		border:1px solid #f9c59f;
+		&.no-margin {
+			margin:0px;
+		}
+	}
+	
+	h3.title {
+		.transition();
+		.opacity(0);
+		width:200px;
+		margin-left:20px;
+		display: inline-block;
+		&.fade {
+			cursor:pointer;
+			.transition(2.5);
+			.opacity(1);
+		}
+		&:hover{
+			color:#08c;
+		}
+	}
+	#paiCarousel {
+		.item:not(.landing) {
+			.rounded(10px);
+			min-height: 500px;
+			background-color: rgba(255,255,216,0.75);
+			padding:20px;
+			margin-top:-15px;
+		}
+	}
+
+}
+
+.container-narrow {
+	margin: 0 auto;
+	max-width: 700px;
+	position:relative;
+}
+.container-narrow > hr {
+	margin: 10px 0;
+}
+

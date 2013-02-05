@@ -1,4 +1,2 @@
-AlizaPai
-========
-
-Aliza Pai portfolio
+Aliza Pai Portfolio
+===================

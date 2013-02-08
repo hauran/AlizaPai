@@ -1,0 +1,8 @@
+[
+	{
+		"db":"stories",
+		"view":"portfolio",
+		"propertyName":"items"
+	},
+	"tasks.readStoryFile"
+]

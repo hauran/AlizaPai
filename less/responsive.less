@@ -1,31 +1,95 @@
-@media (max-width: 480px) { 
+
+@media (min-width: 481px) { 
+
+	.alizapai {
+		#paiCarousel {
+			.item {
+				.portfolioItem {
+					margin-left:30px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 321px) and (max-width: 480px) { 
 	body {
 		padding-top:0px;
 	}
 	.alizapai {
 		.masthead {
-			margin-top:-10px;
+			width: 100%;
+			.nav{
+				right:10px;
+				&.nav-pills > li > a {
+					padding-right:3px;
+					padding-left:3px;
+				}
+			}
+		}
+		h1 {
+			font-size:60px;
 		}
 		h3.title {
-			margin-top:-40px;
+			margin-left: 10px;
 			margin-bottom:0px;
-			&.fade {	
-				margin-top:20px;
-			}
 		}
-		.nav{
-			margin-left: 3px;
-			margin-top:0px;
-			float: left;
-			position:static;
-			margin-bottom:5px;
-			&.nav-pills > li > a {
-				padding-right:3px;
-				padding-left:3px;
+		#paiCarousel {
+			top: 51px;
+			.item {
+				padding-left:10px;
+				.portfolioItem {
+					margin-left:100px;
+				}
 			}
-		}
-		hr.no-margin{
-			width: 100%;
 		}
 	}
 }
+
+
+@media (max-width: 320px) { 
+	body {
+		padding-top:10px;
+	}
+	.alizapai {
+		.masthead {
+			width: 100%;
+			margin-top:-43px;
+			.transition();
+			&.down {
+				.transition();
+				margin-top:-10px;
+			}
+			.nav{
+				margin-left: 3px;
+				margin-top:0px;
+				float: left;
+				position:static;
+				margin-bottom:5px;
+				&.nav-pills > li > a {
+					padding-right:3px;
+					padding-left:3px;
+				}
+			}
+		}
+		h1 {
+			font-size:60px;
+		}
+		h3.title {
+			display:inline;
+			margin-top:-40px;
+			margin-bottom:0px;
+			&.fade {	
+				margin-left: 10px;
+				margin-top:20px;
+			}
+		}
+		#paiCarousel {
+			top: 69px;
+			.item {
+				padding-left:10px;
+			}
+		}
+	}
+}
+

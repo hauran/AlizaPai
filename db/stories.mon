@@ -1,0 +1,3 @@
+db.portfolio.find({type:'story'},function(err, f){
+	callback (null, f)
+})

@@ -1,36 +1,34 @@
 body {
-	padding-top: 20px;
 	padding-bottom: 40px;
-	background-image: url(../img/Sunshine.png);
+	// background-image: url(../img/Sunshine.png);
 	background-repeat: no-repeat;
-	background-color: #ffffcc;
+	background-color: @backgroundColor;
 	background-size: cover;
 	background-attachment:fixed;
 	background-position:right bottom;
-	color:#371801; 
+	// color:#371801; 
 }
-body:after{
-	opacity: .5;
+ul {
+	margin:0px;
+	padding:0px;
 }
-
 .icon-heart {
 	color:red;
 }
 
 .alizapai {
-	a {
-		color:;
-	}
-	.nav {
-		margin-bottom:0px;
-		margin-top:13px;
-		display:inline-block;
-		float:right;
-	}
-	hr {
-		border:1px solid #f9c59f;
-		&.no-margin {
-			margin:0px;
+	.masthead {
+		z-index: 1;
+		width:@pageWidth;
+		position: fixed;
+		background-color: @mastheadBGColor;
+		border-bottom:1px solid #f9c59f;
+		.nav {
+			margin-bottom:0px;
+			margin-top:13px;
+			display:inline-block;
+			position: absolute;
+			right:10px;
 		}
 	}
 	
@@ -38,8 +36,8 @@ body:after{
 		.transition();
 		.opacity(0);
 		width:200px;
-		margin-left:20px;
 		display: inline-block;
+		margin-left:20px;
 		&.fade {
 			cursor:pointer;
 			.transition(2.5);
@@ -50,13 +48,19 @@ body:after{
 		}
 	}
 	#paiCarousel {
-		.item:not(.landing) {
-			.rounded(10px);
-			min-height: 500px;
-			background-color: rgba(255,255,216,0.75);
+		top: 60px;
+		.item{
+			background-color: @caroselItemsBGColor;
 			padding:20px;
-			margin-top:-15px;
+			padding-left: 20px;
 		}
+	}
+
+	.portfolioItem{
+		border:2px solid #DDD;
+		.rounded(10px);
+		margin-bottom:15px;
+		cursor:pointer;
 	}
 
 }

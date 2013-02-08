@@ -1,0 +1,3 @@
+db.portfolio.find({type:'portfolio'},function(err, f){
+	callback (null, f)
+})

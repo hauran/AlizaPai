@@ -1,0 +1,54 @@
+item = {
+	type:'',
+	title:'',
+	urlTitle:'',
+	subtitle:'',
+	role:{
+		title:'',
+		tasks:[]
+	},
+	description:'',
+	text:'',
+	challenge:'',
+	strategy:'',
+	icon:'',
+	file:'',
+	images:[],
+	videos:[]
+}
+
+
+NME = {
+	type:'portfolio',
+	title:'NATIONALMOCKELECTION.ORG',
+	urlTitle:'national_mock_election',
+	subtitle:'',
+	role:{
+		title:'Producer',
+		tasks:['United a fragmented development team under a shared vision and production plan.','Brainstormed design challenges with multi-disciplinary teams and delivered solutions.','Developed functional specification and wireframes for all phases of website.','Created content pieces as needed.','Ensured for product’s quality through testing.']
+	},
+	description:'This is the largest civic engagement project in the country, with millions of students participating in a digital mock election. I produced its new interactive site, with innovative resources for students and educators.',
+	challenge:'How do we translate enthusiasm and participation in the Mock Election into continued civic engagement throughout the year? Once students vote and see the election results, how do we keep them coming back to the site and having their voices heard?',
+	strategy:'I created a pinterest-like space where classrooms share their photos and stories about their Mock Election, thus channeling enthusiasm from the election past into the current conversation. I also developed content for a Student Projects page that keeps students engaged in political thought, post election time. Activities such as “Find Jeremy a Job” and “No Issue Stands Alone” inspire students to think deeply about nuanced topics and brainstorm their own solutions.',
+	icon:'nme/icon.jpg',
+	images:['nme/Nov08-mock-election.jpg'],
+}
+db.portfolio.insert(NME)
+db.portfolio.find({type:'portfolio'})
+
+
+
+story5 = {
+	type:'story',
+	title:'Five',
+	urlTitle:'five',
+	description:'A story about an almost 5 year old boy',
+	file:'/stories/five.txt'
+}
+db.portfolio.insert(story5)
+
+about = {
+	type:'about',
+	text:'While I’ve designed for users of all ages, I keep coming back to creating educational products for kids. I love getting in the head of a child and connecting with the learning, playing and growing part of myself. Here are some of my favorite pieces from the past decade.',
+}
+db.portfolio.insert(about)

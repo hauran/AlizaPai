@@ -2,36 +2,33 @@
   text-align: center;
 }
 body {
-  padding-top: 20px;
   padding-bottom: 40px;
-  background-image: url(../img/Sunshine.png);
   background-repeat: no-repeat;
-  background-color: #ffffcc;
+  background-color: #ffffff;
   background-size: cover;
   background-attachment: fixed;
   background-position: right bottom;
-  color: #371801;
 }
-body:after {
-  opacity: .5;
+ul {
+  margin: 0px;
+  padding: 0px;
 }
 .icon-heart {
   color: red;
 }
-.alizapai a {
-  color: ;
+.alizapai .masthead {
+  z-index: 1;
+  width: 700px;
+  position: fixed;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f9c59f;
 }
-.alizapai .nav {
+.alizapai .masthead .nav {
   margin-bottom: 0px;
   margin-top: 13px;
   display: inline-block;
-  float: right;
-}
-.alizapai hr {
-  border: 1px solid #f9c59f;
-}
-.alizapai hr.no-margin {
-  margin: 0px;
+  position: absolute;
+  right: 10px;
 }
 .alizapai h3.title {
   -webkit-transition: all 0.2s ease-out;
@@ -42,8 +39,8 @@ body:after {
   -webkit-opacity: 0;
   opacity: 0;
   width: 200px;
-  margin-left: 20px;
   display: inline-block;
+  margin-left: 20px;
 }
 .alizapai h3.title.fade {
   cursor: pointer;
@@ -58,17 +55,24 @@ body:after {
 .alizapai h3.title:hover {
   color: #08c;
 }
-.alizapai #paiCarousel .item:not(.landing) {
+.alizapai #paiCarousel {
+  top: 60px;
+}
+.alizapai #paiCarousel .item {
+  background-color: #ffffff;
+  padding: 20px;
+  padding-left: 20px;
+}
+.alizapai .portfolioItem {
+  border: 2px solid #DDD;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  min-height: 500px;
-  background-color: rgba(255, 255, 216, 0.75);
-  padding: 20px;
-  margin-top: -15px;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 .container-narrow {
   margin: 0 auto;
@@ -93,32 +97,182 @@ body:after {
 .marketing p + h4 {
   margin-top: 28px;
 }
-@media (max-width: 480px) {
+.item .portfolio-icon {
+  height: 180px;
+  width: 300px;
+  border-bottom: 2px solid #DDD;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-topleft: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.item .portfolio-icon .viewProject {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-topleft: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 100%;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+  text-align: center;
+  padding-top: 60px;
+}
+.item .portfolio-icon .viewProject:hover {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  opacity: 1;
+}
+.item .portfolio-icon .viewProject .nav-pills li {
+  width: 100%;
+}
+.item .portfolio-icon .viewProject .nav-pills li a {
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.item .portfolio-icon .viewProject .nav-pills li a:hover {
+  background-color: #4ec0fd;
+}
+.item .portfolio-icon .viewProject i {
+  margin-right: 5px;
+}
+.item .portfolio-description {
+  padding: 5px 10px 5px 10px;
+  height: 100px;
+  overflow: hidden;
+  background-color: #ffffff;
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-top-left-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-topleft: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 0px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+@media (min-width: 481px) {
+  .alizapai #paiCarousel .item .portfolioItem {
+    margin-left: 30px;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
   body {
     padding-top: 0px;
   }
   .alizapai .masthead {
-    margin-top: -10px;
+    width: 100%;
+  }
+  .alizapai .masthead .nav {
+    right: 10px;
+  }
+  .alizapai .masthead .nav.nav-pills > li > a {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  .alizapai h1 {
+    font-size: 60px;
   }
   .alizapai h3.title {
-    margin-top: -40px;
+    margin-left: 10px;
     margin-bottom: 0px;
   }
-  .alizapai h3.title.fade {
-    margin-top: 20px;
+  .alizapai #paiCarousel {
+    top: 51px;
   }
-  .alizapai .nav {
+  .alizapai #paiCarousel .item {
+    padding-left: 10px;
+  }
+  .alizapai #paiCarousel .item .portfolioItem {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    padding-top: 10px;
+  }
+  .alizapai .masthead {
+    width: 100%;
+    margin-top: -43px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  .alizapai .masthead.down {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    margin-top: -10px;
+  }
+  .alizapai .masthead .nav {
     margin-left: 3px;
     margin-top: 0px;
     float: left;
     position: static;
     margin-bottom: 5px;
   }
-  .alizapai .nav.nav-pills > li > a {
+  .alizapai .masthead .nav.nav-pills > li > a {
     padding-right: 3px;
     padding-left: 3px;
   }
-  .alizapai hr.no-margin {
-    width: 100%;
+  .alizapai h1 {
+    font-size: 60px;
+  }
+  .alizapai h3.title {
+    display: inline;
+    margin-top: -40px;
+    margin-bottom: 0px;
+  }
+  .alizapai h3.title.fade {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .alizapai #paiCarousel {
+    top: 69px;
+  }
+  .alizapai #paiCarousel .item {
+    padding-left: 10px;
   }
 }

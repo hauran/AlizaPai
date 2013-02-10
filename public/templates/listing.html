@@ -1,0 +1,25 @@
+{{#data}}
+	<div class='row'>
+		{{#items}}
+		 	<div class='span4 portfolioItem nav-link' data-href='/{{#portfolio}}portfolio{{/portfolio}}{{#story}}stories{{/story}}/{{urlTitle}}'>
+		 		<div class='portfolio-icon' style='background-image:url(/img/portfolio/{{icon}})'>
+		 			<div class='viewProject'>
+						<ul class="nav nav-pills">
+				          <li class='active'><a href="/{{#portfolio}}portfolio{{/portfolio}}{{#story}}stories{{/story}}/{{urlTitle}}" class='nav-link' data-index="1">
+				          	{{#portfolio}}<i class='icon-trophy'></i>{{/portfolio}}
+				          	{{#story}}<i class='icon-book'></i>{{/story}}
+				          	View {{#portfolio}}Project{{/portfolio}}{{#story}}Story{{/story}}</a>
+				          </li>
+				        </ul>
+		 			</div>
+				</div>
+				<div class='portfolio-description'>
+					<h4 class='title'>{{title}}</h4>
+					<div class='muted'>
+						{{description}}
+					</div>
+				</div>
+		 	</div>
+	 	{{/items}}
+	</div>
+{{/data}}

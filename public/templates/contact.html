@@ -1,1 +1,80 @@
-<h2>Contact</h2>
+{{#data}}
+	<div class='contact well'>
+		<form class="form-horizontal post-form" action="post/send_email">
+			{{#complete}}
+				<div class="alert alert-success">
+				  Sent. Thanks for the email!
+				</div>
+			{{/complete}}
+			<h4>Drop me an email</h4>
+			<div class="control-group name-field">
+			  	<input type="text" id="name" name="name" p placeholder="Name" class='input input-large' autofocus>
+			  	<div class="help-inline hide name-error">What's your name?</div>
+			</div>
+			<div class="control-group email-field">
+			  	<input type="email" id="email" name="email" placeholder="Email" class='input input-large'>
+			  	<div class="help-inline hide email-error"></div>
+			</div>
+			<div class="control-group body-field">
+			  	<textarea rows='7' class='input input-large' id="body" name="body" />
+			  	<div class="help-inline hide body-error" style='vertical-align:top; margin-top:10px;'>What do you have to say?</div>
+			</div>
+			<button type="submit" class="btn btn-primary"><i class='icon-heart'></i> Send</button>
+			<input type ="hidden" name ="nextAction" value = "/contact/complete" />
+		</form>
+		<br/>
+		<h4>- or do it yourself -</h4>
+		<br/>
+		<h4><i class='icon-envelope'></i> <a href="mailto:alizapai@gmail.com">alizapai@gmail.com</a></h4>
+	</div>
+
+	<script>
+		$('button').on('click',function(e){
+			var name = $('#name').val().trim(),
+				email = $('#email').val().trim(),
+				body = $('#body').val().trim(),
+				errors = false;
+			var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+			if(name.length === 0){
+				$('.name-field').addClass('error');
+				$('.name-error').removeClass('hide');
+				errors = true;
+			}
+			else {
+				$('.name-field').removeClass('error');	
+				$('.name-error').addClass('hide');
+			}
+
+			if(email.length === 0){
+				$('.email-field').addClass('error');
+				$('.email-error').removeClass('hide').html("What's your email?");
+				errors = true;
+			}
+			else if(!(emailRegex.test(email))){
+				$('.email-field').addClass('error');
+				$('.email-error').removeClass('hide').html("That's not your email.");
+				errors = true;
+			}
+			else {
+				$('.email-field').removeClass('error');	
+				$('.email-error').addClass('hide');
+			}
+
+			if(body.length === 0){
+				$('.body-field').addClass('error');
+				$('.body-error').removeClass('hide');
+				errors = true;
+			}
+			else {
+				$('.body-field').removeClass('error');	
+				$('.body-error').addClass('hide');
+			}
+
+			if(errors) {
+				e.preventDefault();
+			}
+
+		});
+	</script>
+{{/data}}

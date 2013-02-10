@@ -1,7 +1,11 @@
 [
 	{
 		"db":"portfolio",
-		"view":"portfolio",
+		"view":{
+			"listing": "listing",
+			"details": "portfolioDetail"
+		},
 		"propertyName":"items"
-	}
+	},
+	"tasks.markPortfolio"
 ]

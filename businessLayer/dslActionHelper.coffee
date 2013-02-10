@@ -19,10 +19,8 @@ exports.compileAllDSLActions = (callback) ->
 exports.executeAction = (req, res, actionName, callback) ->
 	dbFilePath = actionName + ".mon"
 	htmlFilePath = "public/templates/" + actionName + ".html"
-	#initial setup
-	req.actionName = actionName
+	
 	req.__returnData = {}
-
 	if GLOBAL.actionDictionary[actionName]?
 		actionJson = GLOBAL.actionDictionary[actionName]
 		returnResultSet = {}
@@ -42,7 +40,6 @@ executeActionSequence = (req, actionJson, counter, returnResultSet, callback) ->
 		executeStep req, action, (err, returnResultSet) ->
 			executeNextAction req, actionJson, counter, returnResultSet, callback
 	else
-		console.log 'NO ACTION -----------'
 		callback null, {}
 
 

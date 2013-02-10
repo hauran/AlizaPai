@@ -1,8 +1,12 @@
 [
 	{
 		"db":"stories",
-		"view":"portfolio",
+		"view":{
+			"listing": "listing",
+			"details": "storyDetail"
+		},
 		"propertyName":"items"
 	},
+	"tasks.markStory",
 	"tasks.readStoryFile"
 ]

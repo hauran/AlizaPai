@@ -37,23 +37,59 @@ console.log ip, port
 app.listen port, ip
   
 
-app.get "/:page/:action?/:id?", (req, res) ->
-  actionName = req.params.page
-  payload = {};
+app.get '/:action/:title?', (req, res, next) ->
+  actionName = req.params.action
+  queryStringJson = qs.parse(url.parse(req.url).query)
+  _.extend(req.__data, queryStringJson)
+  payload = {}
+
+  # if (req.params.name)
+  #   actionName = req.params.name
+
+  title = req.params.title
+  if (title? and title.indexOf("?") != -1)
+    params = title.split("?")
+    title = params[0]
+    req.__data.params = params[1]
+
+  req.actionName = actionName
+  if title?
+    req.__data.title = title  
+
   dslActionHelper.executeAction req, res, actionName, (err, resultSet) ->
     if err
         next(err)
       else
         payload.data = req.__returnData
-        payload.data.id = req.__data.ID
         if (req.__data.params?)
           payload.data.params = req.__data.params
         view = actionName
         if req.__data.view?
-          view = req.__data.view
+          if typeof req.__data.view is 'string'
+            view = req.__data.view
+          else 
+            if payload.data.items?
+              if payload.data.items.length > 1
+                view = req.__data.view.listing
+              else
+                view = req.__data.view.details
+            else
+              view = actionName
         fs.readFile "public/templates/" + view + ".html", "ascii", (err, htmlView) ->
             res.json({view: htmlView, payload: payload})
 
+app.post '/post/:name', (req, res, next) ->
+  actionName = req.params.name
+  queryStringJson = qs.parse(url.parse(req.url).query)
+  _.extend(req.__data, queryStringJson)
+  payload = {}
+  
+  dslActionHelper.executeAction req, res, actionName, (err, resultSet) -> 
+    if err
+      next(err)
+    else
+      payload.data = req.__returnData
+      res.json({action: req.__data.nextAction, payload: payload}, 200)  
 
 
 

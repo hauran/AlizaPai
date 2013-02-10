@@ -1,6 +1,5 @@
-
+// anything above landscape phone
 @media (min-width: 481px) { 
-
 	.alizapai {
 		#paiCarousel {
 			.item {
@@ -8,10 +7,18 @@
 					margin-left:30px;
 				}
 			}
+			.contact.well {
+				padding-left:190px;
+			}
 		}
 	}
 }
 
+// landscape and portrait phone
+@media (max-width: 480px) {
+}
+
+// landscape phone
 @media (min-width: 321px) and (max-width: 480px) { 
 	body {
 		padding-top:0px;
@@ -43,10 +50,13 @@
 				}
 			}
 		}
+		.contact.well {
+			padding-left:80px;
+		}
 	}
 }
 
-
+// portrait phone
 @media (max-width: 320px) { 
 	body {
 		padding-top:10px;

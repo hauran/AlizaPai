@@ -34,6 +34,67 @@ NME = {
 	images:['nme/Nov08-mock-election.jpg'],
 }
 db.portfolio.insert(NME)
+
+
+WGB = {
+	type:'portfolio',
+	title:'WEGIVEBOOKS.ORG',
+	urlTitle:'we_give_books',
+	subtitle:'',
+	role:{
+		title:'User Researcher & Champion',
+		tasks:['Worked with engineering and marketing to define user experience goals and metrics.','Identified quantitative markers of user experience.','Recruited users for individual testing sessions.','Collected and analyzed user behavior through surveys and interviews.','Created user personas and use case scenarios.','Translated findings into clear recommendations for product changes for product stakeholders.','Presented analysis and recommendations']
+	},
+	description:'This online reading platform needed to be repositioned for its main users. I spearheaded research with its target audience to deliver design and functionality recommendations.',
+	challenge:'Pearson Foundation wasn’t sure about how to invest in the site to prepare for upcoming event that would bring more traffic. I realized that while WeGiveBooks.org had an amazing product to share - children’s books for reading and exploring for free online – the site design and features were being driven by marketing rather than user needs.  How can I convince stakeholders that listening and responding to users is the best way to increase the site’s popularity, traffic and success?',
+	strategy:'I spearheaded a qualitative user study to understand the target users motivations, use patterns and current limitations. I showed stakeholders how simple improvements such as a better search function and a more intuitive reading interface would increase user engagement & retention. By timing these improvements with the high-traffic event, we attracted new users and developed a loyal base.',
+	icon:'wgb/icon.jpg',
+	images:['wgb/WeGiveBooks-logos.jpg'],
+}
+db.portfolio.insert(WGB)
+
+
+littleLeaps = {
+	type:'portfolio',
+	title:'LITTLE LEAPS INTERACTIVE DVD',
+	urlTitle:'little_leaps',
+	subtitle:'',
+	role:{
+		title:'Producer',
+		tasks:["Led brainstorms from early concept through scripting.", "Wrote screenplay and functional specs for editorial sequencing.", "Presented concepts and demos to Nickelodeon and LeapFrog stakeholders.", "Managed cross-functional development team.", "Coached Nickelodeon voice talent.", "Conducted user testing and analysis.", "Coordinated international efforts for a simultaneous French/Spanish/German launch.",]
+	},
+	description:'This interactive DVD takes toddlers on a learning and moving Backyardigans adventure. I scripted and produced over 45 minutes of original animation intermixed with photography and video footage.',
+	challenge:'Toddlers were expected to interact with the DVD by pushing buttons on LeapFrog’s new Little Leaps console, but users this young can’t be expected to follow verbal cues. I wanted to deliver instructions that were clear and intuitive but didn’t break out of the fantasy world of The Backyardigans.',
+	strategy:'The look of console reminded me of the dashboard of an airplane. So I embarked upon an airplane theme for the story plot, enabling an onscreen representation identical to the console in front of the child. Our animators created a reusable sequence from the viewpoint of the pilots asking "you," the user, to help the plane land or takeoff by moving the joystick or pushing a button. User testing showed that these visual cues motivated toddlers to interact with the console and become active participants in adventure.',
+	icon:'llid/icon.png',
+	images:['llid/dvd.png'],
+}
+db.portfolio.insert(littleLeaps)
+
+
+leapfrog = {
+	type:'portfolio',
+	title:'LEAPFROG INTERACTIVE BOOKS',
+	urlTitle:'leapfrog_interactive_books',
+	role:{
+		title:'Content Designer, CoProducer',
+		tasks:['Researched and applied knowledge of learning stages for children ages 0-8.', 'Developed concepts, scripts and functional specifications.', 'Defined scope, schedule and budget for entire production cycle.', 'Directed art, audio, software, editing and QA teams.', 'Planned and directed focus groups and solo testing sessions with users.', 'Presented designs /demos to internal and external stakeholders.']
+	},
+	text:'Titles include Pooh Loves You, Guess How Much I Love You, Mr Brown Can Moo, A to Z Adventure, Animal Dance, Easy Reader Phonics Set One and Pirates!',
+	description:'LeapFrog is famous for its educational books that bring stories to life with dialogue, songs, games and personalized learning modes. I designed the content, interaction and produced award-winning books for young readers.',
+	challenge:"My over-arching challenge, through all book titles, was to use technology in a way that enhanced children's imaginations rather than restricted them to a prescribed experience.",
+	strategy:'I went beyond the user sessions required by LeapFrog and met with young users as much as schedule and budget would allow. In testing, I never told kids what to do, but rather learned from all the unexpected ways they would interact with the prototypes. As a result, my books were known for their engaging content and intuitive play patterns. Awards include the Parents’ Choice Award, KTVU’s Best of the Rest Education Toy Award and the National Parenting Center’s Seal of Approval.',
+	icon:'leapfrog/icon.png',
+	images:['leapfrog/book.png', 'leapfrog/mpp.png'],
+}
+db.portfolio.insert(leapfrog)
+
+
+
+
+
+
+
 db.portfolio.find({type:'portfolio'})
 
 
@@ -43,9 +104,32 @@ story5 = {
 	title:'Five',
 	urlTitle:'five',
 	description:'A story about an almost 5 year old boy',
-	file:'/stories/five.txt'
+	file:'stories/five.txt',
+	icon:'five/icon.jpg'
 }
 db.portfolio.insert(story5)
+
+
+storyDaybreak = {
+	type:'story',
+	title:'The Boy Who Was Swallowed By Daybreak',
+	urlTitle:'daybreak',
+	description:'A story about a boy who dreamt impossible dreams.',
+	icon:'daybreak/icon.png',
+	file:'stories/daybreak.txt'
+}
+db.portfolio.insert(storyDaybreak)
+
+storyDuck = {
+	type:'story',
+	title:'Duck Tales',
+	urlTitle:'duck_tales',
+	description:'A duck who finds himself.',
+	icon:'duck/icon.png',
+	file:'stories/duck.txt'
+}
+db.portfolio.insert(storyDuck)
+
 
 about = {
 	type:'about',

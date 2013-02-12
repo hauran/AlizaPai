@@ -83,7 +83,7 @@ app.post '/post/:name', (req, res, next) ->
   queryStringJson = qs.parse(url.parse(req.url).query)
   _.extend(req.__data, queryStringJson)
   payload = {}
-  
+
   dslActionHelper.executeAction req, res, actionName, (err, resultSet) -> 
     if err
       next(err)

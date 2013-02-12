@@ -2,9 +2,15 @@
 	<div class='row'>
 		{{#items}}
 		 	<div class='span8'>
-		 		{{title}}
+		 		<h4>{{title}}</h4>
+		 		{{description}}
+				{{#images}}
+				 	<div class='span4'>
+				 		<img src='/img/portfolio/{{.}}'/>
+				 	</div>
+			 	{{/images}}
 		 		<br/>
-		 		<hr/>
+		 		<hr style="clear:both;"/>
 		 		<a href="/portfolio" class='nav-link'><i class='icon-caret-left'></i> Back to Portfolio</a>
 		 	</div>
 	 	{{/items}}

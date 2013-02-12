@@ -17,7 +17,7 @@ exports.compileAllDSLActions = (callback) ->
 	callback actionDictionary
 
 exports.executeAction = (req, res, actionName, callback) ->
-	dbFilePath = actionName + ".mon"
+	dbFilePath = "db/" + actionName + ".mon"
 	htmlFilePath = "public/templates/" + actionName + ".html"
 	
 	req.__returnData = {}
@@ -26,36 +26,50 @@ exports.executeAction = (req, res, actionName, callback) ->
 		returnResultSet = {}
 		counter = 0
 		executeActionSequence req, actionJson, counter, returnResultSet, callback
+
+	else if (fs.existsSync(dbFilePath))
+		executeStep req, actionName, callback
+
 	else if (fs.existsSync(htmlFilePath))
 		callback null, {}
 
 executeActionSequence = (req, actionJson, counter, returnResultSet, callback) ->
 	action = actionJson[counter]
+	
 	console.log action
 	if typeof action is 'string'
 		func = action.split('.')
 		global[func[0]][func[1]] req, (err, returnValue) ->
 			executeNextAction req, actionJson, counter, returnValue, callback
 	else if fs.existsSync("dsl/" + req.actionName + ".json")
-		executeStep req, action, (err, returnResultSet) ->
-			executeNextAction req, actionJson, counter, returnResultSet, callback
+		executeStep req, action, (err, returnValue) ->
+			executeNextAction req, actionJson, counter, returnValue, callback
+
 	else
 		callback null, {}
 
 
 executeStep = (req, action, callback) ->
+	console.log(action)
 	if typeof action is 'object'
 		if(action.view?)
 			req.__data.view = action.view
 		else 
 			req.__data.view = req.actionName
-		
+	
 		db = action.db
 		if (db? and fs.existsSync("db/" + db+ ".mon"))
 			mongoDB.runScript db, req, (err, returnResultSet) ->
 				callback  err, returnResultSet
 		else 
 			callback null, {}
+
+	else if typeof action is 'string'
+		mongoDB.runScript action, req, (err, returnResultSet) ->
+			addResultsetToRequest req, action, returnResultSet
+			callback  err, returnResultSet
+	else 
+		callback null, {}
 
 executeNextAction = (req, actionJson, counter, returnResultSet, callback) ->
 	action = actionJson[counter]

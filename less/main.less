@@ -44,6 +44,7 @@ pre {
 
 .alizapai {
 	.masthead {
+		.opacity(0.95);
 		z-index: 1;
 		width:@pageWidth;
 		position: fixed;
@@ -146,13 +147,35 @@ pre {
 			}
 		}
 		.portfolio-description {
+			line-height: 15px;
 			padding:5px 10px 5px 10px;
-			height:100px;
+			height:130px;
 			overflow: hidden;
 			background-color: @transparentColor;
 			.border-radius(0px, 10px, 10px, 0px);
 		}
 	}
+
+	.portfolio-detail {
+		line-height: 20px;
+		.well {
+			margin-top:10px;
+		}
+		.images-row{
+			margin-top:10px;
+		}
+		ul {
+			margin-top:10px;
+			li {
+				margin-left:20px;
+			}
+		}
+		h5 {
+			line-height:12px;
+		}
+
+	}
+
 
 	.contact.well {
 		form {

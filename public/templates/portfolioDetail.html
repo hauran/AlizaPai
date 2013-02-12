@@ -1,18 +1,52 @@
-{{#data}}
-	<div class='row'>
+<div class='portfolio-detail'>
+	{{#data}}
 		{{#items}}
-		 	<div class='span8'>
-		 		<h4>{{title}}</h4>
-		 		{{description}}
-				{{#images}}
-				 	<div class='span4'>
+			<div class='row-fluid'>
+			 	<div class='span12'>
+			 		<h4>{{title}}</h4>
+			 		{{description}}
+			 		{{#text}}
+			 			<br/><br/>
+			 			{{text}}
+			 		{{/text}}
+			 	</div>
+		 	</div>
+		 	
+		 	<div class='row-fluid images-row'>
+		 		{{#images}}
+				 	<div class='span6'>
 				 		<img src='/img/portfolio/{{.}}'/>
 				 	</div>
-			 	{{/images}}
-		 		<br/>
-		 		<hr style="clear:both;"/>
-		 		<a href="/portfolio" class='nav-link'><i class='icon-caret-left'></i> Back to Portfolio</a>
-		 	</div>
+				{{/images}}
+			</div>
+			{{#role}}
+				<div class='row-fluid'>
+				 	<div class='span12 well'>
+				 		My Role: {{title}}
+				 		<ul>
+					 		{{#tasks}}
+					 			<li>{{.}}</li>
+					 		{{/tasks}}
+				 		</ul>
+				 	</div>
+				</div>
+			{{/role}}
+			<div class='row-fluid'>
+			 	<div class='span12'>
+			 		<h5>Challenge</h5>
+			 		{{challenge}}
+			 	</div>
+			</div>
+			<div class='row-fluid'>
+			 	<div class='span12'>
+			 		<h5>Approach</h5>
+			 		{{strategy}}
+			 	</div>
+			</div>
 	 	{{/items}}
-	</div>
-{{/data}}
+
+		<br/>
+		<hr style="clear:both;"/>
+		<a href="/portfolio" class='nav-link'><i class='icon-caret-left'></i> Back to Portfolio</a>
+	{{/data}}
+</div>

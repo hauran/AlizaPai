@@ -1,6 +1,15 @@
 fs = require('fs')
 _ = require("underscore")
 async = require("async")
+nodemailer = require("nodemailer")
+
+smtpTransport = nodemailer.createTransport("SMTP",{
+    service: "Gmail",
+    auth: {
+        user: "onedaysale@gmail.com",
+        pass: "Rad!)head6955"
+    }
+})
 
 exports.readStoryFile = (req, callback) ->
 	async.forEach req.__data.items, (ele) ->
@@ -23,5 +32,17 @@ exports.emailSent = (req, callback) ->
 	callback null, 1
 
 exports.sendEmail = (req, callback) ->
-	console.log 'send email', req.__data
+	reqData = req.__data
+	mailOptions = {
+	    from: reqData.name + '<' + reqData.email + '>',
+	    to:'richardmai@gmail.com',
+	    subject:'sent from AlizaPai.com - Contact',
+	    text:reqData.body
+	}
+	smtpTransport.sendMail mailOptions, (error, response) ->
+	    if(error)
+	        console.log(error)
+	    else
+	        console.log("Message sent: " + response.message);
+
 	callback null, 1

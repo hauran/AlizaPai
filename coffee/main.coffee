@@ -42,7 +42,6 @@ AP.PageView = AP.BaseView.extend {
 		postAction = $(e.target).attr('action');
 		jsonData = $(e.target).serializeJSON();
 		AP.AjaxCall postAction, jsonData, 'json', 'POST', (json) ->
-			console.log(json)
 			AP.pageRouter.navigate json.action, {trigger:true, replace:true}
 		
 }
@@ -63,6 +62,7 @@ AP.PageRouter = Backbone.Router.extend {
 			action = AP.HOME_PAGE
 			$('ul.nav li.active').removeClass('active')
 			$('h3.title').html('&nbsp;').removeClass('fade')
+			$('.masthead').removeClass('down')
 		else 
 			$('ul.nav li.active').removeClass('active')
 			highlight = action
@@ -71,6 +71,7 @@ AP.PageRouter = Backbone.Router.extend {
 				highlight = action.split('/')[0]
 			$('ul.nav li[data-target="' + highlight + '"]').addClass('active')
 			$('h3.title').html('Aliza Pai').addClass('fade')
+			$('.masthead').addClass('down')
 			action = '/' + action
 
 		AP.AjaxCall action, null, 'json', 'GET', (json) ->
@@ -78,7 +79,8 @@ AP.PageRouter = Backbone.Router.extend {
 	,
 	_pageViewSetModel: (json) ->
 		$('#paiContent').html(Mustache.render(json.view, json.payload))
-		# this.routerPageView.setModel(this.templateName, this.payload, this.pageTitle, this.errorFields,!json)
+		$(window).scrollTop(0)
+
 }
 
 (($) ->

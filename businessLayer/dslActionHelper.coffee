@@ -36,7 +36,6 @@ exports.executeAction = (req, res, actionName, callback) ->
 executeActionSequence = (req, actionJson, counter, returnResultSet, callback) ->
 	action = actionJson[counter]
 	
-	console.log action
 	if typeof action is 'string'
 		func = action.split('.')
 		global[func[0]][func[1]] req, (err, returnValue) ->
@@ -44,13 +43,11 @@ executeActionSequence = (req, actionJson, counter, returnResultSet, callback) ->
 	else if fs.existsSync("dsl/" + req.actionName + ".json")
 		executeStep req, action, (err, returnValue) ->
 			executeNextAction req, actionJson, counter, returnValue, callback
-
 	else
 		callback null, {}
 
 
 executeStep = (req, action, callback) ->
-	console.log(action)
 	if typeof action is 'object'
 		if(action.view?)
 			req.__data.view = action.view

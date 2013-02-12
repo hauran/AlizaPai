@@ -80,8 +80,6 @@ app.get '/:action/:title?', (req, res, next) ->
 
 app.post '/post/:name', (req, res, next) ->
   actionName = req.params.name
-  queryStringJson = qs.parse(url.parse(req.url).query)
-  _.extend(req.__data, queryStringJson)
   payload = {}
 
   dslActionHelper.executeAction req, res, actionName, (err, resultSet) -> 

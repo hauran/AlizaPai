@@ -5,7 +5,7 @@ BSON = mongo.BSONPure
 db = require("mongojs").connect(databaseUrl, collections)
 fs = require('fs')
 path = require('path')
-mustache = require('Mustache')
+mustache = require('mustache')
 
 exports.runScript = (templateName, req, callback) ->
 	fs.readFile "db/" + templateName + ".mon", "ascii", (err, dbRun) ->

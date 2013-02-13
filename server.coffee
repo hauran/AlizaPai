@@ -4,6 +4,7 @@ http = require("http")
 fs = require("fs")
 path = require("path")
 _ = require("underscore")
+require("coffee-script")
 
 dslActionHelper = require('./businesslayer/dslActionHelper')
 GLOBAL.actionDictionary = {}
@@ -30,12 +31,11 @@ app.configure ->
   app.use requestValues()
   app.use app.router
 
-ip = process.env.OPENSHIFT_NODEJS_IP or "127.0.0.1"
-port = process.env.OPENSHIFT_NODEJS_PORT or 8888
+ip = process.env.ALIZAPAI_NODEJS_IP or "127.0.0.1"
+port = process.env.ALIZAPAI_NODEJS_PORT or 8080
 console.log "--------------------"
 console.log ip, port
 app.listen port, ip
-  
 
 app.get '/:action/:title?', (req, res, next) ->
   actionName = req.params.action

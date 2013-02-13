@@ -31,7 +31,7 @@ NME = {
 	challenge:'How do we translate enthusiasm and participation in the Mock Election into continued civic engagement throughout the year? Once students vote and see the election results, how do we keep them coming back to the site and having their voices heard?',
 	strategy:'I created a pinterest-like space where classrooms share their photos and stories about their Mock Election, thus channeling enthusiasm from the election past into the current conversation. I also developed content for a Student Projects page that keeps students engaged in political thought, post election time. Activities such as “Find Jeremy a Job” and “No Issue Stands Alone” inspire students to think deeply about nuanced topics and brainstorm their own solutions.',
 	icon:'nme/icon.jpg',
-	images:['nme/Nov08-mock-election.jpg'],
+	images:['nme/Nov08-mock-election.jpg', 'nme/issues.png'],
 }
 db.portfolio.insert(NME)
 
@@ -49,7 +49,7 @@ WGB = {
 	challenge:'Pearson Foundation wasn’t sure about how to invest in the site to prepare for upcoming event that would bring more traffic. I realized that while WeGiveBooks.org had an amazing product to share - children’s books for reading and exploring for free online – the site design and features were being driven by marketing rather than user needs.  How can I convince stakeholders that listening and responding to users is the best way to increase the site’s popularity, traffic and success?',
 	strategy:'I spearheaded a qualitative user study to understand the target users motivations, use patterns and current limitations. I showed stakeholders how simple improvements such as a better search function and a more intuitive reading interface would increase user engagement & retention. By timing these improvements with the high-traffic event, we attracted new users and developed a loyal base.',
 	icon:'wgb/icon.jpg',
-	images:['wgb/WeGiveBooks-logos.jpg'],
+	images:['wgb/logo.jpg', 'wgb/books.png'],
 }
 db.portfolio.insert(WGB)
 
@@ -85,7 +85,7 @@ leapfrog = {
 	challenge:"My over-arching challenge, through all book titles, was to use technology in a way that enhanced children's imaginations rather than restricted them to a prescribed experience.",
 	strategy:'I went beyond the user sessions required by LeapFrog and met with young users as much as schedule and budget would allow. In testing, I never told kids what to do, but rather learned from all the unexpected ways they would interact with the prototypes. As a result, my books were known for their engaging content and intuitive play patterns. Awards include the Parents’ Choice Award, KTVU’s Best of the Rest Education Toy Award and the National Parenting Center’s Seal of Approval.',
 	icon:'leapfrog/icon.png',
-	images:['leapfrog/book.png', 'leapfrog/mpp.png'],
+	images:['leapfrog/book.png', 'leapfrog/moo.png'],
 }
 db.portfolio.insert(leapfrog)
 

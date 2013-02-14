@@ -20,7 +20,7 @@ item = {
 /*-------------------------------------------------------*/
 NME = {
 	type:'portfolio',
-	title:'NATIONALMOCKELECTION.ORG',
+	title:'NationalMockElection.org',
 	urlTitle:'national_mock_election',
 	subtitle:'',
 	role:{
@@ -41,10 +41,9 @@ NME = {
 }
 db.portfolio.insert(NME)
 
-
 WGB = {
 	type:'portfolio',
-	title:'WEGIVEBOOKS.ORG',
+	title:'WeGiveBooks.org',
 	urlTitle:'we_give_books',
 	subtitle:'',
 	role:{
@@ -70,7 +69,7 @@ db.portfolio.insert(WGB)
 
 littleLeaps = {
 	type:'portfolio',
-	title:'LITTLE LEAPS INTERACTIVE DVD',
+	title:'Little Leaps Interactive DVD',
 	urlTitle:'little_leaps',
 	subtitle:'',
 	role:{
@@ -88,7 +87,7 @@ db.portfolio.insert(littleLeaps)
 
 leapfrog = {
 	type:'portfolio',
-	title:'LEAPFROG INTERACTIVE BOOKS',
+	title:'Leapfrog Interactive Books',
 	urlTitle:'leapfrog_interactive_books',
 	role:{
 		title:'Content Designer, CoProducer',
@@ -106,7 +105,7 @@ db.portfolio.insert(leapfrog)
 
 learnAndGroove = {
 	type:'portfolio',
-	title:'LEARN AND GROOVE BILINGUAL RADIO',
+	title:'Learn and Groove Bilingual Radio',
 	urlTitle:'learn_and_groove',
 	role:{
 		title:'Content Designer, Producer',
@@ -120,10 +119,7 @@ learnAndGroove = {
 	icon:'learnGroove/icon.png',
 	images:['learnGroove/radio.png'],
 }
-db.portfolio.insert(leapfrog)
-
-
-
+db.portfolio.insert(learnAndGroove)
 
 
 

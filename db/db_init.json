@@ -17,7 +17,7 @@ item = {
 	videos:[]
 }
 
-
+/*-------------------------------------------------------*/
 NME = {
 	type:'portfolio',
 	title:'NATIONALMOCKELECTION.ORG',
@@ -25,7 +25,13 @@ NME = {
 	subtitle:'',
 	role:{
 		title:'Producer',
-		tasks:['United a fragmented development team under a shared vision and production plan.','Brainstormed design challenges with multi-disciplinary teams and delivered solutions.','Developed functional specification and wireframes for all phases of website.','Created content pieces as needed.','Ensured for product’s quality through testing.']
+		tasks:[
+			'United a fragmented development team under a shared vision and production plan.',
+			'Brainstormed design challenges with multi-disciplinary teams and delivered solutions.',
+			'Developed functional specification and wireframes for all phases of website.',
+			'Created content pieces as needed.',
+			'Ensured for product’s quality through testing.'
+		]
 	},
 	description:'This is the largest civic engagement project in the country, with millions of students participating in a digital mock election. I produced its new interactive site, with innovative resources for students and educators.',
 	challenge:'How do we translate enthusiasm and participation in the Mock Election into continued civic engagement throughout the year? Once students vote and see the election results, how do we keep them coming back to the site and having their voices heard?',
@@ -43,7 +49,15 @@ WGB = {
 	subtitle:'',
 	role:{
 		title:'User Researcher & Champion',
-		tasks:['Worked with engineering and marketing to define user experience goals and metrics.','Identified quantitative markers of user experience.','Recruited users for individual testing sessions.','Collected and analyzed user behavior through surveys and interviews.','Created user personas and use case scenarios.','Translated findings into clear recommendations for product changes for product stakeholders.','Presented analysis and recommendations']
+		tasks:[
+			'Worked with engineering and marketing to define user experience goals and metrics.',
+			'Identified quantitative markers of user experience.',
+			'Recruited users for individual testing sessions.',
+			'Collected and analyzed user behavior through surveys and interviews.',
+			'Created user personas and use case scenarios.',
+			'Translated findings into clear recommendations for product changes for product stakeholders.',
+			'Presented analysis and recommendations'
+		]
 	},
 	description:'This online reading platform needed to be repositioned for its main users. I spearheaded research with its target audience to deliver design and functionality recommendations.',
 	challenge:'Pearson Foundation wasn’t sure about how to invest in the site to prepare for upcoming event that would bring more traffic. I realized that while WeGiveBooks.org had an amazing product to share - children’s books for reading and exploring for free online – the site design and features were being driven by marketing rather than user needs.  How can I convince stakeholders that listening and responding to users is the best way to increase the site’s popularity, traffic and success?',
@@ -89,6 +103,24 @@ leapfrog = {
 }
 db.portfolio.insert(leapfrog)
 
+
+learnAndGroove = {
+	type:'portfolio',
+	title:'LEARN AND GROOVE BILINGUAL RADIO',
+	urlTitle:'learn_and_groove',
+	role:{
+		title:'Content Designer, Producer',
+		tasks:[
+			'Developed product goals, based upon market and curriculum research.',
+			'Led content brainstorms.', 'Drafted concept document.', 'Presented evolving product to LeapFrog stakeholders.', 'Wrote design documents with English and Spanish audio.', 'Managed cross-functional development team.', 'Coached voice talent in recording sessions.', 'Conducted user testing and analysis.', 'Oversaw QA & release process']
+	},
+	description:'This English/Spanish learning radio teaches toddlers over 50 first words through interactive prompts, riddles, songs and music. I designed, user-tested and produced this best-selling toy, which has been translated for an international market.',
+	challenge:"There was an immediate need to boost the LeapFrog 2009 toy line despite a dwindling budget and timeline. I was asked to take a preexisting product but revamp it with bilingual content teaching first words. To succeed, we needed a product that felt like a truly new experience rather than a rehash of old material.",
+	strategy:'I spoke with education experts on how to foster bilingual word development and reviewed the current consumer products teaching first words. I learned that words are best taught in their environmental context & reinforced through multisensory exploration. No product on the market was doing this. So I designed the radio with environmental pages, catchy songs, clickable buttons and engaging lights that captured toddlers’ eyes, ears and hands. The best part? This redesign was really a re-skin of a previously made LeapFrog toy, keeping costs low.',
+	icon:'learnGroove/icon.png',
+	images:['learnGroove/radio.png'],
+}
+db.portfolio.insert(leapfrog)
 
 
 

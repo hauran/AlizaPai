@@ -6,8 +6,8 @@ nodemailer = require("nodemailer")
 smtpTransport = nodemailer.createTransport("SMTP",{
     service: "Gmail",
     auth: {
-        user: "onedaysale@gmail.com",
-        pass: "Rad!)head6955"
+        user: "alizapai@gmail.com",
+        pass: "XXXXXXXXXX"
     }
 })
 
@@ -27,17 +27,18 @@ exports.markPortfolio = (req, callback) ->
 	callback null, 1
 
 exports.emailSent = (req, callback) ->
-	if req.__data.title? and req.__data.title=='complete'
-		req.__returnData.complete = true
+	if req.__data.title? and req.__data.title=='sent'
+		req.__returnData.sent = true
 	callback null, 1
 
 exports.sendEmail = (req, callback) ->
 	reqData = req.__data
 	mailOptions = {
 	    from: reqData.name + '<' + reqData.email + '>',
-	    to:'richardmai@gmail.com',
-	    subject:'sent from AlizaPai.com - Contact',
-	    text:reqData.body
+	    replyTo:reqData.email,
+	    to:'alizapai@gmail.com',
+	    subject:'AlizaPai.com Contact',
+	    text: reqData.body + '\n\n----\n' + reqData.name + '\n' + reqData.email
 	}
 	smtpTransport.sendMail mailOptions, (error, response) ->
 	    if(error)

@@ -1,11 +1,11 @@
 {{#data}}
 	<div class='contact well'>
 		<form class="form-horizontal post-form" action="/post/send_email">
-			{{#complete}}
+			{{#sent}}
 				<div class="alert alert-success">
 				  Thanks for the email!
 				</div>
-			{{/complete}}
+			{{/sent}}
 			<h4>Drop me an email</h4>
 			<div class="control-group name-field">
 			  	<input type="text" id="name" name="name" p placeholder="Name" class='input input-large' autofocus>
@@ -20,7 +20,7 @@
 			  	<div class="help-inline hide body-error" style='vertical-align:top; margin-top:10px;'>What do you have to say?</div>
 			</div>
 			<button type="submit" class="btn btn-primary"><i class='icon-heart'></i> Send</button>
-			<input type ="hidden" name ="nextAction" value = "/contact/complete" />
+			<input type ="hidden" name ="nextAction" value = "/contact/sent" />
 		</form>
 		<br/>
 		<h4>- or do it yourself -</h4>

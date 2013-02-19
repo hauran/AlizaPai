@@ -13,7 +13,7 @@
 				        </ul>
 		 			</div>
 				</div>
-				<div class='portfolio-description'>
+				<div class='portfolio-description {{#story}}story{{/story}}'>
 					<h4 class='title'>{{title}}</h4>
 					<div class='muted'>
 						{{description}}
@@ -23,10 +23,4 @@
 	 	{{/items}}
 	</div>
 	<hr/>
-	<script>
-	$('#paiContent .row').masonry({
-	  itemSelector: '.portfolioItem'
-	});
-
-	</script>
 {{/data}}

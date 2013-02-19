@@ -1,3 +1,5 @@
-db.portfolio.find({type:'portfolio' {{#title}},urlTitle:'{{title}}'{{/title}}  },function(err, f){
+db.portfolio.find({type:'portfolio' {{#title}},urlTitle:'{{title}}'{{/title}}  }).sort({sort:1}, function(err, f){
 	callback (null, f)
 })
+
+

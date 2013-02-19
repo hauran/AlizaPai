@@ -162,10 +162,14 @@ pre {
 		}
 		.portfolio-description {
 			line-height: 15px;
+			height:180px;
 			padding:5px 10px 5px 10px;
 			overflow: hidden;
 			background-color: @transparentColor;
 			.border-radius(0px, 10px, 10px, 0px);
+			&.story{
+				height:100px;
+			}
 		}
 	}
 
@@ -176,6 +180,12 @@ pre {
 		}
 		.images-row{
 			margin-top:10px;
+			div:first-child:last-child {
+				text-align: center;
+				width: 100%;
+    			margin-left:auto;
+    			margin-right: auto;
+			}
 		}
 		ul {
 			margin-top:10px;

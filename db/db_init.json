@@ -87,6 +87,7 @@ littleLeaps = {
 	strategy:'The look of the console reminded me of the dashboard of an airplane. So I embarked upon an airplane theme for the story plot, enabling an onscreen representation identical to the console in front of the child. Our animators created a reusable sequence from the viewpoint of the pilots asking "you," the user, to help the plane land or takeoff by moving the joystick or pushing a button. User testing showed that these visual cues motivated toddlers to interact with the console and become active participants in the adventure.',
 	icon:'llid/icon.png',
 	images:['llid/dvd.png'],
+	videos:['<iframe src="http://player.vimeo.com/video/59928243?title=0&amp;byline=0&amp;portrait=0" width="480" height="272" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>'],
 	sort:3
 }
 db.portfolio.insert(littleLeaps)

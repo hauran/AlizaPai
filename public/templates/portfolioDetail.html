@@ -11,6 +11,19 @@
 			 		{{/text}}
 			 	</div>
 		 	</div>
+				
+			{{#role}}
+				<div class='row-fluid'>
+				 	<div class='span12 well'>
+				 		My Role: {{title}}
+				 		<ul>
+					 		{{#tasks}}
+					 			<li>{{.}}</li>
+					 		{{/tasks}}
+				 		</ul>
+				 	</div>
+				</div>
+			{{/role}}
 		 	
 		 	<div class='row-fluid images-row'>
 		 		{{#images}}
@@ -27,19 +40,6 @@
 				 	</div>
 				{{/videos}}
 			</div>
-				
-			{{#role}}
-				<div class='row-fluid'>
-				 	<div class='span12 well'>
-				 		My Role: {{title}}
-				 		<ul>
-					 		{{#tasks}}
-					 			<li>{{.}}</li>
-					 		{{/tasks}}
-				 		</ul>
-				 	</div>
-				</div>
-			{{/role}}
 			<div class='row-fluid'>
 			 	<div class='span12'>
 			 		<h5>Challenge</h5>
